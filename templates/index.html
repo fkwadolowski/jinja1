@@ -5,10 +5,15 @@
     <title>My Website</title>
 </head>
 <body>
-    {% if name %}
-  <h1>{{ name }}</h1>
-    {% else %}
-  <h1>Hello, Fail!</h1>
-    {% endif %}
+  {% if gender is defined %}
+  <h1>Hey {{ name }},</h1>
+  <h2>I think you are {{ gender }}</h2>
+  <h3>And maybe {{ age }} years old.</h3>
+  {% else %}
+  <h1>Enter address like this: /guess/(your name)</h1>
+  {% endif %}
 </body>
+<footer>
+    Copyright {{ CURRENT_YEAR }}, Built by {{ YOUR_NAME }}
+</footer>
 </html>
